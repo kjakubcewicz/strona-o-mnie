@@ -1,4 +1,51 @@
-html, body {
-    font-size: 10px;
+* {
+    box-sizing: border-box;
 }
 
+html, body {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(250, 250, 250);
+}
+
+a:link{
+
+}
+
+/* załatwia sprawę spójnych paddingów wszystkich sekcji*/
+main, footer {
+    padding: 20px 50px;
+    width: 100%;
+}
+
+
+
+nav, footer {
+    color: white;
+}
+
+nav {
+    padding: 10px 50px;
+    background-color: #01a093;
+}
+
+nav * {
+    list-style-type: none;
+    display: inline-block;
+}
+
+nav ul li {
+    padding: 0 20px;
+}
+
+.content {
+    padding: 50px 0;
+}
+
+footer {
+    background-color: #111111;
+}
