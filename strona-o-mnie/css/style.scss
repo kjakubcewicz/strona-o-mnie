@@ -1,42 +1,48 @@
+$nav-height: 70px;
+
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 9;
-}
-
-html, body {
-    font-size: 10px;
     margin: 0;
     padding: 0;
 }
 
+html, body {
+    font-size: 10px;
+}
+
 body {
-    padding-top: 50px;
     background-color: rgb(250, 250, 250);
 }
 
 .photo-container {
     display: block;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: url("../img/IMG_2731-br2-compr.jpg") no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    position: relative;
+}
+
+.caption {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    font-size: 2rem;
 }
 
 a:link{
 
 }
 
-/* załatwia sprawę spójnych paddingów wszystkich sekcji*/
 main, footer {
     width: 100%;
 }
 
 main {
-    /*margin-top: 51px;*/
+    padding-top: $nav-height;
     height: 100%;
 }
 
@@ -49,22 +55,37 @@ nav, footer {
     padding: 20px 50px;
 }
 
-nav {
+.nav {
     background-color: #01a093;
-    height: 50px;
+    height: $nav-height;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 99;
 }
 
-nav * {
+.nav-logo {
+    display: inline-block;
+    float: left;
+}
+
+.nav-container {
+    float: left;
+}
+
+.nav ul {
+    display: inline-block;
+}
+
+.menu-item {
     list-style-type: none;
     display: inline-block;
 }
 
-nav ul li {
-    padding: 0 20px;
+.menu-item a {
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
 }
 
 .content {
