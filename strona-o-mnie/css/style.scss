@@ -1,4 +1,7 @@
 $nav-height: 70px;
+$kj-blue: #2196f3;
+$kj-grey: #4d4d4d;
+$max-width: 1140px;
 
 * {
     box-sizing: border-box;
@@ -19,38 +22,11 @@ h1, h2, h3 {
     font-family: Montserrat, Arial, sans-serif;
 }
 
-.photo-container {
-    display: block;
-    width: 100%;
-    height: 100vh;
-    background: url("../img/macbook.jpg") no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    position: relative;
-}
-
-.caption {
-    position: absolute;
-    top: 50vh;
-    left: 50vw;
-    font-size: 2rem;
-}
-
 a:link{
-
+    color: $kj-blue;
 }
 
-main, footer {
-    width: 100%;
-}
-
-main {
-    height: 100%;
-}
-
-.baner {
+nav, main, footer {
     width: 100%;
 }
 
@@ -59,15 +35,19 @@ nav, footer {
     padding: 20px 50px;
 }
 
-.nav {
+nav {
     background-color: ghostwhite;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
     position: fixed;
     top: 0;
-    width: 100%;
     z-index: 99;
+}
+
+.nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: $max-width;
 }
 
 .nav-logo {
@@ -79,7 +59,7 @@ nav, footer {
     max-width: 200px;
 }
 
-.nav-container {
+.menu {
     align-items: center;
     display: flex;
 }
@@ -99,12 +79,31 @@ nav, footer {
     text-decoration: none;
 }
 
+.photo-container {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background: url("../img/macbook.jpg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+
+.caption {
+    font-size: 2rem;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+}
+
 .container {
-    max-width: 1200px;
+    max-width: $max-width;
     margin: 0 auto;
     padding-bottom: 100px;
 }
 
 footer {
-    background-color: #111111;
+    background-color: $kj-grey;
 }
