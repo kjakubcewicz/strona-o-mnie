@@ -61,7 +61,9 @@ nav, footer {
 
 .nav {
     background-color: ghostwhite;
-    height: $nav-height;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     position: fixed;
     top: 0;
     width: 100%;
@@ -69,16 +71,21 @@ nav, footer {
 }
 
 .nav-logo {
-    display: inline-block;
-    float: left;
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    max-width: 200px;
 }
 
 .nav-container {
-    float: left;
+    align-items: center;
+    display: flex;
 }
 
 .nav ul {
-    display: inline-block;
+    align-items: center;
 }
 
 .menu-item {
