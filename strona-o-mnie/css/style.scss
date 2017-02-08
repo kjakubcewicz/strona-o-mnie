@@ -33,9 +33,14 @@ a:link {
   text-decoration: none;
 }
 
-.low-contrast a{
+.low-contrast a:link{
   color: #000;
   opacity: 0.6;
+}
+
+.low-contrast a:hover {
+  color: #fff;
+  transition: color 0.5s;
 }
 
 nav, main, footer {
