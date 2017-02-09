@@ -182,7 +182,13 @@ nav {
 .skill {
   max-width: 32.33%;
   text-align: center;
+  padding: 2%;
 }
+
+.skill-description {
+  word-wrap: break-word;
+}
+
 .icon img {
   max-width: 100px;
 }
