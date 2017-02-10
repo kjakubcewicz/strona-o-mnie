@@ -167,6 +167,41 @@ nav {
   padding-left: 60px;
 }
 
+//bio ends
+
+//skills
+
+.skills {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: $max-width;
+}
+
+.skill {
+  max-width: 32.33%;
+  text-align: center;
+  padding: 2%;
+}
+
+.skill-description {
+  word-wrap: break-word;
+}
+
+.skill-description h3 {
+  color: #000;
+  padding-bottom: 5px;
+}
+
+.icon img {
+  max-width: 100px;
+}
+
+
+//skills end
+
+
 footer {
   background-color: $kj-grey;
 }
