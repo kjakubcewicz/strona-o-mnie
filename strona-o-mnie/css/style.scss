@@ -119,6 +119,17 @@ nav {
   position: relative;
 }
 
+//.next {
+//  position: absolute;
+//  bottom: 5vh;
+//  left: 50vw;
+//  transform: translateX(-50%);
+//  z-index: 20;
+//  svg {
+//    fill: #fff;
+//  }
+//}
+
 .caption {
   font-size: 2rem;
   position: absolute;
@@ -259,6 +270,16 @@ nav {
 //contact starts
 .contact-text {
   padding-top: 20px;
+}
+
+.contact-text p a:link{
+  color: #000;
+  opacity: 0.6;
+}
+
+.contact-text p a:hover {
+  color: #fff;
+  transition: color 0.5s;
 }
 
 .social-media {
