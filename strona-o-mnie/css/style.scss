@@ -134,6 +134,7 @@ nav {
   max-width: $max-width;
   margin: 0 auto;
   padding: 100px 0;
+  border-bottom: 1px solid $kj-blue;
 }
 
 .container p {
@@ -141,7 +142,7 @@ nav {
   line-height: 1.7;
 }
 
-#bio {
+#bio, #contact {
   background-color: $kj-blue;
   color: #fff;
 }
@@ -200,6 +201,68 @@ nav {
 
 
 //skills end
+//portofolio starts
+
+.projects {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: $max-width;
+}
+
+.project {
+  max-width: 40%;
+  text-align: center;
+  padding: 2%;
+}
+
+.project-description {
+  padding-top: 20px;
+  word-wrap: break-word;
+}
+
+.project-description h3 {
+  color: #000;
+  padding-bottom: 5px;
+}
+
+.project-image img {
+  max-width: 400px;
+  box-shadow: grey 2px 2px 2px 2px
+}
+
+.button {
+  padding: 20px;
+  font-weight: 700;
+
+  a {
+    padding: 20px;
+    color: #fff;
+    background-color: $kj-blue;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $kj-visited;
+      transition: background-color 0.5s;
+    }
+  }
+}
+
+#portfolio .container {
+  border-bottom: none;
+}
+
+//portfolio ends
+
+//contact starts
+.contact-text {
+  padding-top: 20px;
+}
+
+
+//contact ends
 
 
 footer {
