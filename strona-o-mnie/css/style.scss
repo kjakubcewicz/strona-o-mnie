@@ -11,7 +11,8 @@ $max-width: 1140px;
   padding: 0;
 }
 
-html, body {
+html,
+body {
   font-size: 10px;
 }
 
@@ -20,7 +21,9 @@ body {
   font-family: Cardo, "Times New Roman", serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: Montserrat, Arial, sans-serif;
 }
 
@@ -45,7 +48,7 @@ a:link {
   text-decoration: none;
 }
 
-.low-contrast a:link{
+.low-contrast a:link {
   color: #000;
   opacity: 0.6;
 }
@@ -55,11 +58,14 @@ a:link {
   transition: color 0.5s;
 }
 
-nav, main, footer {
+nav,
+main,
+footer {
   width: 100%;
 }
 
-nav, footer {
+nav,
+footer {
   color: white;
   padding: 20px 50px;
 }
@@ -88,7 +94,8 @@ nav {
   align-items: center;
 }
 
-.nav-logo img, .ft-logo img {
+.nav-logo img,
+.ft-logo img {
   max-width: 200px;
   padding: 10px;
 }
@@ -151,7 +158,7 @@ nav {
   position: absolute;
   top: 50vh;
   left: 50vw;
-  background-color: rgba(255,255,255,0.4);
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 30px;
   transform: translateY(-50%);
 }
@@ -169,7 +176,8 @@ nav {
   line-height: 1.7;
 }
 
-#bio, #contact {
+#bio,
+#contact {
   background-color: $kj-blue;
   color: #fff;
 }
@@ -194,10 +202,6 @@ nav {
 .bio-text {
   padding-left: 60px;
 }
-
-//bio ends
-
-//skills
 
 .skills {
   display: flex;
@@ -225,10 +229,6 @@ nav {
 .icon img {
   max-width: 100px;
 }
-
-
-//skills end
-//portofolio starts
 
 .projects {
   display: flex;
@@ -281,14 +281,11 @@ nav {
   border-bottom: none;
 }
 
-//portfolio ends
-
-//contact starts
 .contact-text {
   padding-top: 20px;
 }
 
-.contact-text p a:link{
+.contact-text p a:link {
   color: #000;
   opacity: 0.6;
 }
@@ -301,9 +298,6 @@ nav {
 .social-media {
   text-align: center;
 }
-
-//contact ends
-
 
 footer {
   background-color: $kj-grey;
