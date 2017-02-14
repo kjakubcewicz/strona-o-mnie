@@ -112,22 +112,22 @@ nav {
 .menu-item {
   list-style-type: none;
   display: inline-block;
-}
 
-.menu-item a {
-  display: inline-block;
-  padding: 20px;
-  text-decoration: none;
-}
+  a {
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
 
-.menu-item a:hover {
-  color: #fff;
-  background-color: $kj-blue;
-  transition: background-color 0.5s;
-}
+    &:hover {
+      color: #fff;
+      background-color: $kj-blue;
+      transition: background-color 0.5s;
+    }
 
-.menu-item a:visited {
-  color: $kj-visited;
+    &:visited {
+      color: $kj-visited;
+    }
+  }
 }
 
 .photo-container {
@@ -169,11 +169,11 @@ nav {
   margin: 0 auto;
   padding: 100px 0;
   border-bottom: 1px solid $kj-blue;
-}
 
-.container p {
-  padding-bottom: 25px;
-  line-height: 1.7;
+  p {
+    padding-bottom: 25px;
+    line-height: 1.7;
+  }
 }
 
 #bio,
@@ -187,10 +187,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   //tekst powinien się łamać przy zmniejszaniu ekranu - pomyślec nad rozwiązaniem
-}
-
-.bio-portrait {
-
 }
 
 .bio-portrait img {
@@ -219,11 +215,11 @@ nav {
 
 .skill-description {
   word-wrap: break-word;
-}
 
-.skill-description h3 {
-  color: #000;
-  padding-bottom: 5px;
+  h3 {
+    color: #000;
+    padding-bottom: 5px;
+  }
 }
 
 .icon img {
@@ -248,11 +244,11 @@ nav {
 .project-description {
   padding-top: 20px;
   word-wrap: break-word;
-}
 
-.project-description h3 {
-  color: #000;
-  padding-bottom: 5px;
+  h3 {
+    color: #000;
+    padding-bottom: 5px;
+  }
 }
 
 .project-image img {
@@ -283,16 +279,16 @@ nav {
 
 .contact-text {
   padding-top: 20px;
-}
 
-.contact-text p a:link {
-  color: #000;
-  opacity: 0.6;
-}
+  p a:link {
+    color: #000;
+    opacity: 0.6;
 
-.contact-text p a:hover {
-  color: #fff;
-  transition: color 0.5s;
+    &:hover {
+      color: #fff;
+      transition: color 0.5s;
+    }
+  }
 }
 
 .social-media {
@@ -320,8 +316,4 @@ footer {
     fill: $kj-visited;
     transition: fill 0.5s;
   }
-}
-
-.go-up {
-
 }
