@@ -5,6 +5,35 @@ $nav-color: #f5f5f5;
 $background-color: #FAFAFA;
 $max-width: 1140px;
 
+@mixin blink {
+  from, to {
+    stroke: $kj-grey;
+  }
+  50% {
+    stroke: $kj-blue;
+  }
+}
+
+@keyframes blink {
+  @include blink;
+}
+
+@-moz-keyframes blink {
+  @include blink;
+}
+
+@-webkit-keyframes blink {
+  @include blink;
+}
+
+@-ms-keyframes blink {
+  @include blink;
+}
+
+@-o-keyframes blink {
+  @include blink;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -100,13 +129,12 @@ nav {
   padding: 10px;
 }
 
-//selektor nie działa? ani stroke, ani fill...
-//
-//.logo-dash {
-//  stroke: $kj-blue;
-//  fill: $kj-blue;
-//  animation: 1s blink step-end infinite;
-//}
+.logo-dash {
+  stroke: $kj-grey;
+  fill: $kj-grey;
+  animation: blink 1s step-end infinite;
+  -webkit-animation: blink 1s step-end infinite;
+}
 
 .menu {
   align-items: center;
