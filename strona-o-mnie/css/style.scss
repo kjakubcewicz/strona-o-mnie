@@ -94,11 +94,19 @@ nav {
   align-items: center;
 }
 
-.nav-logo img,
+.nav-logo svg,
 .ft-logo img {
   max-width: 200px;
   padding: 10px;
 }
+
+//selektor nie działa? ani stroke, ani fill...
+//
+//.logo-dash {
+//  stroke: $kj-blue;
+//  fill: $kj-blue;
+//  animation: 1s blink step-end infinite;
+//}
 
 .menu {
   align-items: center;
