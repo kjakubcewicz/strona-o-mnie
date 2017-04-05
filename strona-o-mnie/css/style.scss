@@ -11,7 +11,8 @@ $max-width: 1140px;
   padding: 0;
 }
 
-html, body {
+html,
+body {
   font-size: 10px;
 }
 
@@ -20,8 +21,22 @@ body {
   font-family: Cardo, "Times New Roman", serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: Montserrat, Arial, sans-serif;
+}
+
+h2 {
+  font-size: 3.4rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+p {
+  font-size: 2.4rem;
 }
 
 ::selection {
@@ -33,7 +48,7 @@ a:link {
   text-decoration: none;
 }
 
-.low-contrast a:link{
+.low-contrast a:link {
   color: #000;
   opacity: 0.6;
 }
@@ -43,11 +58,14 @@ a:link {
   transition: color 0.5s;
 }
 
-nav, main, footer {
+nav,
+main,
+footer {
   width: 100%;
 }
 
-nav, footer {
+nav,
+footer {
   color: white;
   padding: 20px 50px;
 }
@@ -76,7 +94,8 @@ nav {
   align-items: center;
 }
 
-.nav-logo img, .ft-logo img {
+.nav-logo img,
+.ft-logo img {
   max-width: 200px;
   padding: 10px;
 }
@@ -93,18 +112,22 @@ nav {
 .menu-item {
   list-style-type: none;
   display: inline-block;
-}
 
-.menu-item a {
-  display: inline-block;
-  padding: 20px;
-  text-decoration: none;
-}
+  a {
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
 
-.menu-item a:hover {
-  color: #fff;
-  background-color: $kj-blue;
-  transition: background-color 0.5s;
+    &:hover {
+      color: #fff;
+      background-color: $kj-blue;
+      transition: background-color 0.5s;
+    }
+
+    &:visited {
+      color: $kj-visited;
+    }
+  }
 }
 
 .photo-container {
@@ -119,12 +142,23 @@ nav {
   position: relative;
 }
 
+//.next {
+//  position: absolute;
+//  bottom: 5vh;
+//  left: 50vw;
+//  transform: translateX(-50%);
+//  z-index: 20;
+//  svg {
+//    fill: #fff;
+//  }
+//}
+
 .caption {
   font-size: 2rem;
   position: absolute;
   top: 50vh;
   left: 50vw;
-  background-color: rgba(255,255,255,0.4);
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 30px;
   transform: translateY(-50%);
 }
@@ -134,14 +168,16 @@ nav {
   max-width: $max-width;
   margin: 0 auto;
   padding: 100px 0;
+  border-bottom: 1px solid $kj-blue;
+
+  p {
+    padding-bottom: 25px;
+    line-height: 1.7;
+  }
 }
 
-.container p {
-  padding-bottom: 25px;
-  line-height: 1.7;
-}
-
-#bio {
+#bio,
+#contact {
   background-color: $kj-blue;
   color: #fff;
 }
@@ -153,10 +189,6 @@ nav {
   //tekst powinien się łamać przy zmniejszaniu ekranu - pomyślec nad rozwiązaniem
 }
 
-.bio-portrait {
-
-}
-
 .bio-portrait img {
   border-radius: 50%;
   width: 400px;
@@ -166,10 +198,6 @@ nav {
 .bio-text {
   padding-left: 60px;
 }
-
-//bio ends
-
-//skills
 
 .skills {
   display: flex;
@@ -187,20 +215,85 @@ nav {
 
 .skill-description {
   word-wrap: break-word;
-}
 
-.skill-description h3 {
-  color: #000;
-  padding-bottom: 5px;
+  h3 {
+    color: #000;
+    padding-bottom: 5px;
+  }
 }
 
 .icon img {
   max-width: 100px;
 }
 
+.projects {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: $max-width;
+}
 
-//skills end
+.project {
+  max-width: 40%;
+  text-align: center;
+  padding: 2%;
+}
 
+.project-description {
+  padding-top: 20px;
+  word-wrap: break-word;
+
+  h3 {
+    color: #000;
+    padding-bottom: 5px;
+  }
+}
+
+.project-image img {
+  max-width: 400px;
+  box-shadow: grey 2px 2px 2px 2px
+}
+
+.button {
+  padding: 20px;
+  font-weight: 700;
+
+  a {
+    padding: 20px;
+    color: #fff;
+    background-color: $kj-blue;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $kj-visited;
+      transition: background-color 0.5s;
+    }
+  }
+}
+
+#portfolio .container {
+  border-bottom: none;
+}
+
+.contact-text {
+  padding-top: 20px;
+
+  p a:link {
+    color: #000;
+    opacity: 0.6;
+
+    &:hover {
+      color: #fff;
+      transition: color 0.5s;
+    }
+  }
+}
+
+.social-media {
+  text-align: center;
+}
 
 footer {
   background-color: $kj-grey;
@@ -213,8 +306,14 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 1.5rem;
 }
 
-.go-up {
+.social-media svg {
+  fill: #fff;
 
+  &:hover {
+    fill: $kj-visited;
+    transition: fill 0.5s;
+  }
 }
