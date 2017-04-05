@@ -47,13 +47,15 @@ body {
 
 body {
   background-color: $background-color;
-  font-family: Cardo, "Times New Roman", serif;
+  font-family: Montserrat, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
 h2,
 h3 {
   font-family: Montserrat, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 h2 {
@@ -153,11 +155,11 @@ nav {
     display: inline-block;
     padding: 20px;
     text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
 
     &:hover {
       color: #fff;
       background-color: $kj-blue;
-      transition: background-color 0.5s;
     }
 
     &:visited {
