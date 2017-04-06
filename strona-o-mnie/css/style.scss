@@ -5,6 +5,8 @@ $nav-color: #f5f5f5;
 $background-color: #FAFAFA;
 $max-width: 1140px;
 
+$nav-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
+
 @mixin blink {
   from, to {
     stroke: $kj-grey;
@@ -32,6 +34,11 @@ $max-width: 1140px;
 
 @-o-keyframes blink {
   @include blink;
+}
+
+@mixin rwd-slide-in-nav-animation {
+  transition: transform 0.5s ease-in-out, left 0.5s ease-in-out, padding-left 0.5s ease-in-out;
+  -webkit-transition: transform 0.5s ease-in-out, left 0.5s ease-in-out, padding-left 0.5s ease-in-out;
 }
 
 * {
@@ -107,6 +114,8 @@ nav {
   position: fixed;
   top: 0;
   z-index: 99;
+  box-shadow: $nav-shadow;
+  -webkit-box-shadow: $nav-shadow;
 }
 
 .nav-container {
@@ -144,10 +153,6 @@ nav {
   display: flex;
 }
 
-.nav ul {
-  align-items: center;
-}
-
 .menu-item {
   list-style-type: none;
   display: inline-block;
@@ -165,6 +170,96 @@ nav {
 
     &:visited {
       color: $kj-visited;
+    }
+  }
+}
+
+.menu_toggle input {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .menu-items {
+    position: fixed;
+    top: 72px;
+    left: 100vw;
+    background: $nav-color;
+
+    box-shadow: $nav-shadow;
+    -webkit-box-shadow: $nav-shadow;
+
+    transform: translateX(100%);
+    @include rwd-slide-in-nav-animation;
+
+    a {
+      width: 100vw;
+      padding: 1.7rem 1.2rem;
+    }
+  }
+
+  .menu_toggle {
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    padding-top: 50%;
+
+    span {
+      display: block;
+      width: 33px;
+      height: 4px;
+      margin-bottom: 5px;
+      position: relative;
+      background-color: $kj-blue;
+      border-radius: 3px;
+
+      transform-origin: 4px 0;
+
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      opacity 0.55s ease;
+
+      &:first-child {
+        transform-origin: 0 0;
+      }
+
+      &:nth-last-child(2) {
+        transform-origin: 0 100%;
+      }
+    }
+
+    input[type=checkbox] {
+      display: block;
+      opacity: 0;
+      width: 40px;
+      height: 35px;
+      position: absolute;
+      top: 19px;
+      left: -3px;
+      cursor: pointer;
+      z-index: 5;
+
+      &:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: $kj-grey;
+
+        &:nth-last-child(3) {
+          opacity: 0;
+          transform: rotate(0deg) scale(0.2, 0.2);
+        }
+
+        &:nth-last-child(2) {
+          opacity: 1;
+          transform: rotate(-45deg) translate(0, -1px);
+        }
+      }
+
+      &:checked ~ .menu-items {
+        transform: translateX(0%);
+        padding-left: 0;
+        left: 0;
+      }
     }
   }
 }
