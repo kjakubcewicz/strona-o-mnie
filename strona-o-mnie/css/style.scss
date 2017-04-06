@@ -314,6 +314,13 @@ nav {
   }
 }
 
+@media screen and (max-width: $max-width){
+  .container {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+
 #bio,
 #contact {
   background-color: $kj-blue;
@@ -324,17 +331,35 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  //tekst powinien się łamać przy zmniejszaniu ekranu - pomyślec nad rozwiązaniem
 }
 
-.bio-portrait img {
-  border-radius: 50%;
-  width: 400px;
-  height: 400px;
+.bio-portrait {
+  max-width: 33.33%;
+
+  img {
+    border-radius: 50%;
+    width: 100%;
+  }
 }
 
 .bio-text {
   padding-left: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .container.bio {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .bio-portrait {
+    max-width: 50%;
+  }
+
+  .bio-text {
+    padding-left: 0;
+    //TODO:czy wyśrodkować tekst?
+  }
 }
 
 .skills {
@@ -390,7 +415,7 @@ nav {
 }
 
 .project-image img {
-  max-width: 400px;
+  max-width: 100%;
   box-shadow: grey 2px 2px 2px 2px
 }
 
@@ -413,6 +438,12 @@ nav {
 
 #portfolio .container {
   border-bottom: none;
+}
+
+@media screen and (max-width: 768px) {
+  .project {
+    max-width: 100%;
+  }
 }
 
 .contact-text {
