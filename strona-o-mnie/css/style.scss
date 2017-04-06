@@ -54,8 +54,9 @@ body {
 
 body {
   background-color: $background-color;
-  font-family: Montserrat, Arial, sans-serif;
+  font-family: 'Noto Sans', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 h1,
@@ -297,7 +298,7 @@ nav {
   transform: translateY(-50%);
 
   h1 {
-   color: $kj-blue;
+    color: $kj-blue;
   }
 }
 
@@ -310,11 +311,11 @@ nav {
 
   p {
     padding-bottom: 25px;
-    line-height: 1.7;
+    line-height: 1.6;
   }
 }
 
-@media screen and (max-width: $max-width){
+@media screen and (max-width: $max-width) {
   .container {
     padding-left: 2%;
     padding-right: 2%;
@@ -367,17 +368,24 @@ nav {
   justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
-  max-width: $max-width;
 }
 
 .skill {
-  max-width: 32.33%;
+  max-width: 31.33%;
   text-align: center;
   padding: 2%;
+  box-shadow: $nav-shadow;
+  margin-bottom: 2%;
+  background-color: white;
+  border-radius: 2px;
 }
 
 .skill-description {
   word-wrap: break-word;
+
+  p {
+    font-size: 1.6rem;
+  }
 
   h3 {
     color: #000;
@@ -387,6 +395,18 @@ nav {
 
 .icon img {
   max-width: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .skill {
+    max-width: 48%;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .skill {
+    max-width: 100%;
+  }
 }
 
 .projects {
@@ -408,6 +428,10 @@ nav {
   padding-top: 20px;
   word-wrap: break-word;
 
+  p {
+    font-size: 1.6rem;
+  }
+
   h3 {
     color: #000;
     padding-bottom: 5px;
@@ -422,6 +446,12 @@ nav {
 .button {
   padding: 20px;
   font-weight: 700;
+
+  &.disabled span {
+    color: #fff;
+    background-color: $kj-visited;
+    padding: 20px;
+  }
 
   a {
     padding: 20px;
@@ -488,7 +518,7 @@ footer {
   font-size: 1.5rem;
 }
 
-@media screen and (max-width: 460px){
+@media screen and (max-width: 460px) {
   .ft-container {
     flex-direction: column;
 
