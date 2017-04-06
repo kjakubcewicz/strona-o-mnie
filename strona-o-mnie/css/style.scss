@@ -201,9 +201,7 @@ nav {
   .menu_toggle {
     display: block;
     position: relative;
-    width: 50px;
-    height: 50px;
-    padding-top: 50%;
+    padding-top: 21%;
 
     span {
       display: block;
@@ -235,7 +233,7 @@ nav {
       width: 40px;
       height: 35px;
       position: absolute;
-      top: 19px;
+      top: -6px;
       left: -3px;
       cursor: pointer;
       z-index: 5;
