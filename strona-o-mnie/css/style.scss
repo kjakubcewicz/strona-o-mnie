@@ -106,7 +106,7 @@ footer {
 nav,
 footer {
   color: white;
-  padding: 0 50px;
+  padding: 0 2%;
 }
 
 nav {
@@ -138,7 +138,7 @@ nav {
 .nav-logo svg,
 .ft-logo img {
   max-width: 200px;
-  padding: 10px;
+  padding-right: 5%;
 }
 
 .logo-dash {
@@ -431,6 +431,15 @@ nav {
 
 .social-media {
   text-align: center;
+
+  svg {
+    fill: #fff;
+
+    &:hover {
+      fill: $kj-visited;
+      transition: fill 0.5s;
+    }
+  }
 }
 
 footer {
@@ -444,14 +453,21 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   font-size: 1.5rem;
 }
 
-.social-media svg {
-  fill: #fff;
+@media screen and (max-width: 460px){
+  .ft-container {
+    flex-direction: column;
 
-  &:hover {
-    fill: $kj-visited;
-    transition: fill 0.5s;
+    .ft-logo img {
+      padding: 0;
+    }
+
+    .copyright {
+      font-size: 1.2rem;
+      padding-top: 2%;
+    }
   }
 }
