@@ -347,6 +347,7 @@ nav {
 
 .bio-text {
   padding-left: 60px;
+  max-width: 65%;
 }
 
 @media screen and (max-width: 768px) {
@@ -361,6 +362,7 @@ nav {
 
   .bio-text {
     padding-left: 0;
+    max-width: 100%;
     //TODO:czy wyśrodkować tekst?
   }
 }
@@ -450,12 +452,14 @@ nav {
   font-weight: 700;
 
   &.disabled span {
+    display: inline-block;
     color: #fff;
     background-color: $kj-visited;
     padding: 20px;
   }
 
   a {
+    display: inline-block;
     padding: 20px;
     color: #fff;
     background-color: $kj-blue;
