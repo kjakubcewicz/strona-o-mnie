@@ -310,6 +310,10 @@ nav {
   p {
     padding-bottom: 25px;
     line-height: 1.6;
+
+    &.small-text {
+      font-size: 1.2rem;
+    }
   }
 }
 
