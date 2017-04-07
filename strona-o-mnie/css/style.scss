@@ -387,6 +387,15 @@ nav {
   }
 }
 
+.card {
+  box-shadow: $nav-shadow;
+  margin-bottom: 2%;
+  border-radius: 2px;
+  background-color: white;
+  text-align: center;
+  padding: 2%;
+}
+
 .skills {
   display: flex;
   justify-content: space-around;
@@ -396,12 +405,6 @@ nav {
 
 .skill {
   max-width: 31.33%;
-  text-align: center;
-  padding: 2%;
-  box-shadow: $nav-shadow;
-  margin-bottom: 2%;
-  background-color: white;
-  border-radius: 2px;
 }
 
 .skill-description {
@@ -448,8 +451,6 @@ nav {
 
 .project {
   max-width: 40%;
-  text-align: center;
-  padding: 2%;
 }
 
 .project-description {
