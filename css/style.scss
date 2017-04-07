@@ -64,7 +64,6 @@ h2,
 h3 {
   font-family: Montserrat, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  //line-height: 1.6em;
   padding-bottom: 2%;
 }
 
@@ -282,6 +281,7 @@ nav {
   left: calc(50vw - 5px);
   transform: translateX(-50%);
   z-index: 20;
+
   svg {
     fill: $kj-blue;
     -webkit-filter: drop-shadow(-5px -5px 5px $kj-grey);
@@ -383,7 +383,6 @@ nav {
   .bio-text {
     padding-left: 0;
     max-width: 100%;
-    //TODO:czy wyśrodkować tekst?
   }
 }
 
