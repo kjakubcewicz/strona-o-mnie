@@ -65,6 +65,7 @@ h3 {
   font-family: Montserrat, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   //line-height: 1.6em;
+  padding-bottom: 2%;
 }
 
 h2 {
@@ -278,11 +279,13 @@ nav {
 .next {
   position: absolute;
   bottom: 5%;
-  left: 50vw;
+  left: calc(50vw - 5px);
   transform: translateX(-50%);
   z-index: 20;
   svg {
     fill: $kj-blue;
+    -webkit-filter: drop-shadow(-5px -5px 5px $kj-grey);
+    filter: drop-shadow(-5px -5px 5px $kj-grey);
   }
 }
 
@@ -310,7 +313,7 @@ nav {
   font-size: 1.8rem;
   max-width: $max-width;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 10vw 0;
   border-bottom: 1px solid $kj-blue;
 
   p {
@@ -332,6 +335,12 @@ nav {
   .caption h1 {
     margin-top: 0.27em;
     margin-bottom: 0.27em;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .container {
+    padding: 15vw 0;
   }
 }
 
@@ -405,6 +414,10 @@ nav {
   h3 {
     color: #000;
     padding-bottom: 5px;
+  }
+
+  a {
+    color: $kj-blue;
   }
 }
 
