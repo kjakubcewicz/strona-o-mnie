@@ -251,7 +251,7 @@ nav {
     margin-bottom: 0.27em; } }
 @media screen and (max-width: 460px) {
   .container {
-    padding: 15vw 0; } }
+    padding: 15vw 2%; } }
 #bio,
 #contact {
   background-color: #2196f3;
