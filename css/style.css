@@ -57,17 +57,19 @@ p {
 ::selection {
   background-color: #82B1FF; }
 
-a:link {
+a:link, a:visited {
   color: #2196f3;
   text-decoration: none; }
 
-.low-contrast a:link {
+.low-contrast p a:link,
+.low-contrast p a:visited {
   color: #000;
-  opacity: 0.6; }
-
-.low-contrast a:hover {
-  color: #fff;
+  opacity: 0.6;
   transition: color 0.5s; }
+
+.low-contrast p a:hover,
+.low-contrast a:active {
+  color: #fff; }
 
 nav,
 main,
@@ -125,11 +127,9 @@ nav {
     padding: 20px;
     text-decoration: none;
     transition: background-color 0.5s, color 0.3s; }
-    .menu-item a:hover {
+    .menu-item a:hover, .menu-item a:active {
       color: #fff;
       background-color: #2196f3; }
-    .menu-item a:visited {
-      color: #757575; }
 
 .menu_toggle input {
   display: none; }
@@ -210,8 +210,11 @@ nav {
   z-index: 20; }
   .next svg {
     fill: #2196f3;
+    transition: fill 0.5s;
     -webkit-filter: drop-shadow(-5px -5px 5px #4d4d4d);
     filter: drop-shadow(-5px -5px 5px #4d4d4d); }
+    .next svg:hover, .next svg:active {
+      fill: #fff; }
 
 .caption-container {
   max-width: 1140px;
@@ -358,7 +361,7 @@ nav {
     background-color: #2196f3;
     text-decoration: none;
     transition: background-color 0.5s; }
-    .button a:hover {
+    .button a:hover, .button a:active {
       background-color: #757575; }
 
 #portfolio .container {
@@ -369,19 +372,13 @@ nav {
     max-width: 100%; } }
 .contact-text {
   padding-top: 20px; }
-  .contact-text p a:link {
-    color: #000;
-    opacity: 0.6;
-    transition: color 0.5s; }
-    .contact-text p a:link:hover {
-      color: #fff; }
 
 .social-media {
   text-align: center; }
   .social-media svg {
     fill: #fff;
     transition: fill 0.5s; }
-    .social-media svg:hover {
+    .social-media svg:hover, .social-media svg:active {
       fill: #757575; }
 
 footer {

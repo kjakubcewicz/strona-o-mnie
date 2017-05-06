@@ -83,19 +83,21 @@ p {
   background-color: #82B1FF;
 }
 
-a:link {
+a:link, a:visited {
   color: $kj-blue;
   text-decoration: none;
 }
 
-.low-contrast a:link {
+.low-contrast a:link,
+.low-contrast a:visited {
   color: #000;
   opacity: 0.6;
+  transition: color 0.5s;
 }
 
-.low-contrast a:hover {
+.low-contrast a:hover,
+.low-contrast a:active {
   color: #fff;
-  transition: color 0.5s;
 }
 
 nav,
@@ -164,13 +166,10 @@ nav {
     text-decoration: none;
     transition: background-color 0.5s, color 0.3s;
 
-    &:hover {
+    &:hover,
+    &:active {
       color: #fff;
       background-color: $kj-blue;
-    }
-
-    &:visited {
-      color: $kj-visited;
     }
   }
 }
@@ -284,8 +283,14 @@ nav {
 
   svg {
     fill: $kj-blue;
+    transition: fill 0.5s;
     -webkit-filter: drop-shadow(-5px -5px 5px $kj-grey);
     filter: drop-shadow(-5px -5px 5px $kj-grey);
+
+    &:hover,
+    &:active {
+      fill: #fff;
+    }
   }
 }
 
@@ -490,7 +495,8 @@ nav {
     text-decoration: none;
     transition: background-color 0.5s;
 
-    &:hover {
+    &:hover,
+    &:active {
       background-color: $kj-visited;
     }
   }
@@ -508,16 +514,6 @@ nav {
 
 .contact-text {
   padding-top: 20px;
-
-  p a:link {
-    color: #000;
-    opacity: 0.6;
-    transition: color 0.5s;
-
-    &:hover {
-      color: #fff;
-    }
-  }
 }
 
 .social-media {
@@ -527,7 +523,8 @@ nav {
     fill: #fff;
     transition: fill 0.5s;
 
-    &:hover {
+    &:hover,
+    &:active {
       fill: $kj-visited;
     }
   }
