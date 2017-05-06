@@ -124,7 +124,7 @@ nav {
     display: inline-block;
     padding: 20px;
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s; }
+    transition: background-color 0.5s, color 0.3s; }
     .menu-item a:hover {
       color: #fff;
       background-color: #2196f3; }
@@ -356,10 +356,10 @@ nav {
     padding: 20px;
     color: #fff;
     background-color: #2196f3;
-    text-decoration: none; }
+    text-decoration: none;
+    transition: background-color 0.5s; }
     .button a:hover {
-      background-color: #757575;
-      transition: background-color 0.5s; }
+      background-color: #757575; }
 
 #portfolio .container {
   border-bottom: none; }
@@ -371,18 +371,18 @@ nav {
   padding-top: 20px; }
   .contact-text p a:link {
     color: #000;
-    opacity: 0.6; }
+    opacity: 0.6;
+    transition: color 0.5s; }
     .contact-text p a:link:hover {
-      color: #fff;
-      transition: color 0.5s; }
+      color: #fff; }
 
 .social-media {
   text-align: center; }
   .social-media svg {
-    fill: #fff; }
+    fill: #fff;
+    transition: fill 0.5s; }
     .social-media svg:hover {
-      fill: #757575;
-      transition: fill 0.5s; }
+      fill: #757575; }
 
 footer {
   background-color: #4d4d4d; }
