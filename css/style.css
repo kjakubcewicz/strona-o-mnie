@@ -380,6 +380,9 @@ nav {
 
 .social-media {
   text-align: center; }
+  .social-media a:link,
+  .social-media a:visited {
+    opacity: 1; }
   .social-media svg {
     fill: #fff;
     transition: fill 0.5s; }
