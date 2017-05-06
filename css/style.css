@@ -68,7 +68,7 @@ a:link, a:visited {
 .low-contrast a:visited {
   color: #000;
   opacity: 0.6;
-  transition: color 0.5s; }
+  transition: color 0.5s, opacity 0.5s; }
 
 .low-contrast a:hover,
 .low-contrast a:active {
