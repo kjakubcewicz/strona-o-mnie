@@ -59,17 +59,21 @@ p {
 
 a:link, a:visited {
   color: #2196f3;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: color 0.5s; }
+  a:link:hover, a:link:active, a:visited:hover, a:visited:active {
+    color: inherit; }
 
-.low-contrast p a:link,
-.low-contrast p a:visited {
+.low-contrast a:link,
+.low-contrast a:visited {
   color: #000;
   opacity: 0.6;
   transition: color 0.5s; }
 
-.low-contrast p a:hover,
+.low-contrast a:hover,
 .low-contrast a:active {
-  color: #fff; }
+  color: #fff;
+  opacity: 1; }
 
 nav,
 main,
@@ -362,7 +366,8 @@ nav {
     text-decoration: none;
     transition: background-color 0.5s; }
     .button a:hover, .button a:active {
-      background-color: #757575; }
+      background-color: #757575;
+      color: #fff; }
 
 #portfolio .container {
   border-bottom: none; }

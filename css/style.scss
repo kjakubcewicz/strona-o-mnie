@@ -86,6 +86,12 @@ p {
 a:link, a:visited {
   color: $kj-blue;
   text-decoration: none;
+  transition: color 0.5s;
+
+  &:hover,
+  &:active {
+    color: inherit;
+  }
 }
 
 .low-contrast a:link,
@@ -98,6 +104,7 @@ a:link, a:visited {
 .low-contrast a:hover,
 .low-contrast a:active {
   color: #fff;
+  opacity: 1;
 }
 
 nav,
@@ -498,6 +505,7 @@ nav {
     &:hover,
     &:active {
       background-color: $kj-visited;
+      color: #fff;
     }
   }
 }
