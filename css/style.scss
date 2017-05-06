@@ -356,6 +356,12 @@ nav {
   }
 }
 
+.fade-hidden {
+  position: relative;
+  right: 20px;
+  opacity: 0;
+}
+
 #bio,
 #contact {
   background-color: $kj-blue;
