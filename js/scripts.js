@@ -26,15 +26,11 @@ $(document).ready(function() {
   var navAnchors = $('.menu-items li').children();
   var anchorsArray = [];
 
-  console.log(navAnchors);
-
   for (var i = 0; i < navAnchors.length; i++) {
     var navAnchor = navAnchors[i];
     var navHref = $(navAnchor).attr('href');
     anchorsArray.push(navHref);
   }
-
-  console.log(anchorsArray);
 
   $(window).scroll(function () {
     var windowPosition = $(window).scrollTop();
