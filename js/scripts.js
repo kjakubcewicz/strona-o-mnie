@@ -16,5 +16,9 @@ $(document).ready(function() {
     });
   });
 
-  //TODO: Smooth scrolling
+  //Smooth scrolling
+  $('a[href^="#"]').click(function(e) {
+    e.preventDefault();
+    $(window).scrollTo(this.hash, {duration:1000, interrupt:true});
+  });
 });

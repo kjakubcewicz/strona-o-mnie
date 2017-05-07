@@ -24,7 +24,7 @@
   <nav>
     <div class="nav-container">
       <div class="nav-logo">
-        <a href="#">
+        <a href="#top">
           <svg
             xmlns:dc="http://purl.org/dc/elements/1.1/"
             xmlns:cc="http://creativecommons.org/ns#"
@@ -165,7 +165,10 @@
     </div>
   </nav>
 
-  <div class="photo-container">
+  <div
+    class="photo-container"
+    id="top"
+  >
     <div class="caption-container">
       <div class="caption">
         <h1>
@@ -575,7 +578,7 @@
 <footer>
   <div class="ft-container">
     <div class="ft-logo">
-      <a href="#">
+      <a href="#top">
         <img src="img/KJCOMM-logo_white.svg"
              alt="Logo KJ Communication"/>
       </a>
@@ -584,9 +587,6 @@
     <div class="copyright">
       &copy; 2016-2017 KJ Communication
     </div>
-    <!--<div class="go-up">
-      Up
-    </div>-->
   </div>
 </footer>
 
@@ -599,6 +599,7 @@
     event.stopPropagation();
   })
 </script>
+<script src="js/jquery.scrollTo.min.js"></script>
 <script src="js/scripts.js"></script>
 </body>
 </html>
