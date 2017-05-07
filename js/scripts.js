@@ -21,4 +21,44 @@ $(document).ready(function() {
     e.preventDefault();
     $(window).scrollTo(this.hash, {duration:1000, interrupt:true});
   });
+
+  //Scroll tracing
+  var navAnchors = $('.menu-items li').children();
+  var anchorsArray = [];
+
+  console.log(navAnchors);
+
+  for (var i = 0; i < navAnchors.length; i++) {
+    var navAnchor = navAnchors[i];
+    var navHref = $(navAnchor).attr('href');
+    anchorsArray.push(navHref);
+  }
+
+  console.log(anchorsArray);
+
+  $(window).scroll(function () {
+    var windowPosition = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    var documentHeight = $(document).height();
+
+    for (var i = 0; i < anchorsArray.length; i++) {
+      var sectionID = anchorsArray[i];
+      var sectionPosition = $(sectionID).offset().top;
+      var sectionHeight = $(sectionID).height();
+
+      if (windowPosition >= sectionPosition && windowPosition < (sectionPosition + sectionHeight)) {
+        $("a[href='" + sectionID + "']").addClass("menu-item_active");
+      } else {
+        $("a[href='" + sectionID + "']").removeClass("menu-item_active");
+      }
+    }
+
+    if(windowPosition + windowHeight === documentHeight) {
+      if (!$(".menu-items li:last-child a").hasClass("nav-active")) {
+        var navActiveCurrent = $(".menu-item_active").attr("href");
+        $("a[href='" + navActiveCurrent + "']").removeClass("menu-item_active");
+        $(".menu-items li:last-child a").addClass("menu-item_active");
+      }
+    }
+  })
 });
