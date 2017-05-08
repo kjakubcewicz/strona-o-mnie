@@ -4,10 +4,10 @@ $(document).ready(function() {
   $(window).scroll( function(){
     $('.fade-hidden').each(function(i){
 
-      var objectBottom = $(this).offset().top + ($(this).outerHeight()) * 0.5;
+      var objectMiddle = $(this).offset().top + ($(this).outerHeight()) * 0.5;
       var windowBottom = $(window).scrollTop() + $(window).height();
 
-      if( windowBottom > objectBottom ){
+      if( windowBottom > objectMiddle ){
         $(this).animate({
           'opacity':'1',
           'right': '0'
@@ -50,7 +50,7 @@ $(document).ready(function() {
     }
 
     if(windowPosition + windowHeight === documentHeight) {
-      if (!$(".menu-items li:last-child a").hasClass("nav-active")) {
+      if (!$(".menu-items li:last-child a").hasClass("menu-item_active")) {
         var navActiveCurrent = $(".menu-item_active").attr("href");
         $("a[href='" + navActiveCurrent + "']").removeClass("menu-item_active");
         $(".menu-items li:last-child a").addClass("menu-item_active");
