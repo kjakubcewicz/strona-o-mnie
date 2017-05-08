@@ -64,16 +64,15 @@ a:link, a:visited {
   a:link:hover, a:link:active, a:visited:hover, a:visited:active {
     color: inherit; }
 
-.low-contrast a:link,
-.low-contrast a:visited {
+.low-contrast a:link, .low-contrast a:visited {
   color: #000;
   opacity: 0.6;
   transition: color 0.5s, opacity 0.5s; }
-
-.low-contrast a:hover,
-.low-contrast a:active {
+.low-contrast a:hover, .low-contrast a:active {
   color: #fff;
   opacity: 1; }
+.low-contrast a:focus {
+  outline: #fff auto 5px; }
 
 nav,
 main,
@@ -149,7 +148,7 @@ nav {
       transform: translateY(-10px); }
     .menu-item a:hover, .menu-item a:active, .menu-item a:focus {
       color: #2196f3; }
-    .menu-item a:hover::after, .menu-item a:active::after, .menu-item a:focus::after, .menu-item a.menu-item_active::after {
+    .menu-item a:hover::after, .menu-item a.menu-item_active::after {
       height: 4px;
       opacity: 1;
       -webkit-transform: translateY(0px);
@@ -409,7 +408,9 @@ nav {
   text-align: center; }
   .social-media a:link,
   .social-media a:visited {
-    opacity: 1; }
+    display: inline-block;
+    opacity: 1;
+    outline-color: #2196f3; }
   .social-media svg {
     fill: #fff;
     transition: fill 0.5s; }
