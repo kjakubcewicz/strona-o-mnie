@@ -1,11 +1,13 @@
 $(document).ready(function() {
   ///Mobile menu hiding on click anywhere but the menu toggle button (checkbox)
-  $('body').click(function () {
-    $('.menu_toggle input').prop('checked', false);
+  $('body').click(function (event) {
+    if ($(event.target).is('.menu-item') || $(event.target).is('.menu_toggle input')) {
+      event.stopPropagation();
+    }
+    else {
+      $('.menu_toggle input').prop('checked', false);
+    }
   });
-  $('.menu_toggle input').click(function (event) {
-    event.stopPropagation();
-  })
 
   //On scroll fade-in
   $(window).scroll( function(){
