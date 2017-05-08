@@ -1,6 +1,13 @@
 $(document).ready(function() {
-  //On scroll fade-in
+  ///Mobile menu hiding on click anywhere but the menu toggle button (checkbox)
+  $('body').click(function () {
+    $('.menu_toggle input').prop('checked', false);
+  });
+  $('.menu_toggle input').click(function (event) {
+    event.stopPropagation();
+  })
 
+  //On scroll fade-in
   $(window).scroll( function(){
     $('.fade-hidden').each(function(i){
 
