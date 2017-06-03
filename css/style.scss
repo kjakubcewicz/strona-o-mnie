@@ -369,6 +369,15 @@ nav {
       font-size: 1.2rem;
     }
   }
+
+  ul {
+    padding-bottom: 25px;
+    padding-left: 25px;
+  }
+
+  li {
+    padding-bottom: 10px;
+  }
 }
 
 @media screen and (max-width: $max-width) {
